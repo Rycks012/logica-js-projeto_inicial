@@ -9,3 +9,10 @@ while (tentativa != numeroSecreto) {
 }
 
 alert(`Parabéns! Você acertou o número secreto ${numeroSecreto}.`);
+let jogarNovamente = confirm("Deseja jogar novamente?");
+
+if (jogarNovamente) {
+    location.reload();
+} else {
+    alert("Obrigado por jogar!");
+}
