@@ -14,6 +14,7 @@ function jogar() {
     // Define o número secreto que o usuário deve adivinhar
     const numeroSecreto = 29;
     console.log("Número secreto definido:", numeroSecreto); // Log do número secreto
+    let tentativas = 1; // Contador de tentativas (começa em 1 para contar a primeira tentativa)
 
     // Solicita a primeira tentativa do usuário
     let tentativa = prompt("Adivinhe o número secreto entre 1 e 100");
@@ -35,10 +36,12 @@ function jogar() {
         }
         // Solicita nova tentativa
         tentativa = prompt("Adivinhe o número secreto entre 1 e 100");
+        tentativas++; // Incrementa o contador de tentativas a cada nova tentativa
+        console.log("Número de tentativas:", tentativas); // Log do número de tentativas
     }
 
     // Usuário acertou o número secreto
-    alert(`Parabéns! Você acertou o número secreto ${numeroSecreto}.`);
+    alert(`Parabéns! Você acertou o número secreto ${numeroSecreto}, com ${tentativas} tentativas.`);
     console.log("Usuário acertou o número secreto!");
 }
 
